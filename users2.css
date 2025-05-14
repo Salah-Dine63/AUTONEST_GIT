@@ -1,0 +1,210 @@
+/* ------------------------- */
+/*        RESET DE BASE      */
+/* ------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+/* ------------------------- */
+/*         CONTENEUR         */
+/* ------------------------- */
+.container {
+    display: flex;
+    min-height: 100vh; /* S'assure que la hauteur couvre tout l'écran */
+}
+
+/* ------------------------- */
+/*         SIDEBAR           */
+/* ------------------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2d3b55;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour séparer visuellement */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d60000;
+}
+
+.sidebar ul li a.active {
+    background-color: #3c4b63;
+}
+
+/* ------------------------- */
+/*         CONTENU           */
+/* ------------------------- */
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Laisse de l'espace pour la sidebar */
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 20px;
+}
+
+.main-content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ------------------------- */
+/*        FORMULAIRE         */
+/* ------------------------- */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Groupes de champs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d60000; /* Rouge vif au focus */
+    box-shadow: 0 0 5px rgba(214, 0, 0, 0.3); /* Ombre rouge subtile */
+    outline: none;
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #d60000; /* Rouge vif */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #b30000; /* Rouge plus foncé */
+    transform: scale(1.05); /* Légère mise en avant */
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Réduction légère */
+}
+
+/* Messages de succès et d'erreur */
+.success,
+.error {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.success {
+    background-color: #28a745; /* Vert pour succès */
+    color: white;
+}
+
+.error {
+    background-color: #dc3545; /* Rouge pour erreur */
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
+}

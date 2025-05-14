@@ -1,0 +1,178 @@
+/* Style général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9; /* Fond clair */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Aligner les éléments verticalement */
+    align-items: center; /* Centrer horizontalement */
+    min-height: 100vh; /* Hauteur minimale de la page */
+}
+
+/* En-tête */
+header {
+    width: 100%; /* Prendre toute la largeur */
+    display: flex;
+    justify-content: space-between; /* Aligner le contenu à gauche et à droite */
+    align-items: center; /* Centrer verticalement */
+    padding: 10px 30px; /* Espacement interne */
+    background-color: #fff; /* Fond blanc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    position: fixed; /* Fixer le header en haut */
+    top: 0; /* Positionner en haut */
+    z-index: 1000; /* S'assurer que le header est au-dessus des autres éléments */
+}
+
+header h1 {
+    font-size: 1.5em; /* Taille réduite pour le titre */
+    color: #d62828;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #db3434;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #b92929;
+}
+
+/* Conteneur principal */
+.commande-page {
+    margin-top: 80px; /* Ajouter un espace sous le header */
+    width: 40%; /* Taille moyenne pour le formulaire */
+    background-color: #fff;
+    padding: 30px; /* Espacement interne augmenté */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    border-radius: 12px; /* Bordures arrondies */
+    text-align: center; /* Centrer le contenu */
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+}
+
+/* Titre <h1> dans .commande-page */
+.commande-page h1 {
+    color: #db3434; /* Rouge vif */
+    font-weight: bold; /* Rendre le texte plus épais */
+}
+
+.commande-page2 h1 {
+    font-size: 3em; /* Taille de texte plus grande */
+    color: #db3434; /* Rouge vif */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+.commande-page2 p {
+    font-size: 1.2em; /* Taille de texte légèrement augmentée */
+    color: #555; /* Couleur grise pour le texte */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 10px; /* Espacement entre les paragraphes */
+}
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Message de succès */
+.success-message {
+    background-color: #d4edda; /* Vert clair */
+    color: #155724; /* Texte vert foncé */
+    border: 1px solid #c3e6cb; /* Bordure verte */
+    padding: 15px;
+    border-radius: 8px; /* Bordures arrondies */
+    margin-bottom: 20px; /* Espacement avec le formulaire */
+    font-size: 1em;
+    text-align: center; /* Centrer le texte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les champs */
+}
+
+form label {
+    font-size: 1em; /* Taille de texte légèrement augmentée */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left; /* Alignement à gauche */
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px; /* Espacement interne augmenté */
+    font-size: 1em; /* Taille de texte augmentée */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordures arrondies */
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #3498db; /* Bleu vif */
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Ombre subtile */
+    outline: none;
+}
+
+/* Bouton de soumission */
+form button {
+    padding: 15px; /* Espacement interne augmenté */
+    font-size: 1.1em; /* Taille de texte augmentée */
+    font-weight: bold;
+    color: #fff;
+    background-color: #db3434; /* Bleu vif */
+    border: none;
+    border-radius: 8px; /* Bordures arrondies */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b92929; /* Bleu plus foncé */
+    transform: scale(1.05); /* Légère mise en avant */
+    box-shadow: 0 6px 12px rgba(41, 128, 185, 0.3); /* Ombre subtile */
+}
+
+form button:active {
+    transform: scale(0.98); /* Réduction légère */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .commande-page {
+        width: 90%; /* Ajustement pour les petits écrans */
+        padding: 20px;
+    }
+
+    form button {
+        font-size: 1em; /* Réduction de la taille du texte */
+    }
+}

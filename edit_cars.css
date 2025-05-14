@@ -1,0 +1,214 @@
+/* ------------------------- */
+/*        RESET DE BASE      */
+/* ------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+/* ------------------------- */
+/*         CONTENEUR         */
+/* ------------------------- */
+.container {
+    display: flex;
+    min-height: 100vh; /* S'assure que la hauteur couvre tout l'écran */
+}
+
+/* ------------------------- */
+/*         SIDEBAR           */
+/* ------------------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2d3b55;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour séparer visuellement */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d60000;
+}
+
+.sidebar ul li a.active {
+    background-color: #3c4b63;
+}
+
+/* Contenu principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    flex-grow: 1;
+    margin-left: 250px; /* Laisse de l'espace pour la barre latérale */
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.main-content h1 {
+    text-align: center; /* Centre le texte horizontalement */
+    font-size: 28px;
+    color: #2c3e50; /* Couleur principale */
+    margin-bottom: 30px;
+}
+
+/* Formulaire */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #2c3e50; /* Couleur principale */
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e20b0b; /* Rouge vif */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #c00; /* Rouge plus foncé au survol */
+}
+
+/* Bouton secondaire (annuler ou autre action) */
+form .btn-secondary {
+    background-color: #f4f4f4; /* Gris clair */
+    color: #e20b0b; /* Rouge vif */
+    border: 1px solid #e20b0b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form .btn-secondary:hover {
+    background-color: #e20b0b; /* Rouge vif au survol */
+    color: #fff; /* Texte blanc */
+}
+
+/* Style pour l'image de la voiture */
+.car-image {
+    display: block;
+    margin: 0 auto; /* Centre l'image horizontalement */
+    max-width: 150px; /* Limite la largeur de l'image */
+    margin-bottom: 20px; /* Ajoute un espace entre l'image et le formulaire */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+}
+
+/* Alertes */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background-color: #28a745; /* Vert pour succès */
+    color: white;
+}
+
+.alert.error {
+    background-color: #dc3545; /* Rouge pour erreur */
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}

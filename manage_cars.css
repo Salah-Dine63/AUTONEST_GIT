@@ -1,0 +1,337 @@
+/* ------------------------- */
+/*        RESET DE BASE      */
+/* ------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4; /* Fond gris clair */
+    color: #333; /* Texte gris foncé */
+    margin: 0;
+}
+
+/* ------------------------- */
+/*         CONTENEUR         */
+/* ------------------------- */
+.container {
+    display: flex;
+    min-height: 100vh; /* S'assure que la hauteur couvre tout l'écran */
+}
+
+/* ------------------------- */
+/*         SIDEBAR           */
+/* ------------------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2d3b55; /* Bleu foncé */
+    color: #fff; /* Texte blanc */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #d60000; /* Rouge vif */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #fff; /* Texte blanc */
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #d60000; /* Rouge vif au survol */
+}
+
+.sidebar ul li a.active {
+    background-color: #3c4b63; /* Bleu légèrement plus clair */
+}
+
+/* ------------------------- */
+/*         CONTENU           */
+/* ------------------------- */
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 40px;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: margin-left 0.3s ease; /* Transition pour le déplacement */
+}
+
+/* ------------------------- */
+/*        TABLEAU            */
+/* ------------------------- */
+.car-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff; /* Fond blanc */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-top: 20px;
+}
+
+.car-table thead {
+    background-color: #d60000; /* Rouge vif */
+    color: white; /* Texte blanc */
+}
+
+.car-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Gris clair */
+}
+
+.car-table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Blanc */
+}
+
+.car-table th, .car-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.car-table td:nth-child(1),
+.car-table th:nth-child(1) {
+    background-color: #d60000; /* Rouge vif pour la première colonne */
+    color: white; /* Texte blanc */
+}
+
+.car-table td:nth-child(1) img {
+    background-color: transparent; /* Supprime la couleur rouge de l'image */
+    border-radius: 0; /* Supprime les coins arrondis si appliqués */
+}
+
+.car-table td:nth-child(2),
+.car-table th:nth-child(2) {
+    background-color: #ffffff; /* Blanc pour la deuxième colonne */
+    color: #333;
+}
+
+.car-table img {
+    border-radius: 6px;
+}
+
+/* ------------------------- */
+/*        FORMULAIRE         */
+/* ------------------------- */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Fond gris clair */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Texte gris foncé */
+    margin-bottom: 5px; /* Espacement sous le label */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Champs prennent toute la largeur */
+    padding: 10px; /* Espacement intérieur */
+    font-size: 14px; /* Taille de la police */
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    background-color: #fff; /* Fond blanc */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #d60000; /* Rouge vif au focus */
+    box-shadow: 0 0 5px rgba(214, 0, 0, 0.3); /* Ombre rouge subtile */
+    outline: none; /* Supprime le contour par défaut */
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Texte blanc */
+    background-color: #d60000; /* Rouge vif */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #b30000; /* Rouge plus foncé */
+    transform: scale(1.02); /* Légère mise en avant */
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Réduction légère */
+}
+
+/* ------------------------- */
+/*        BOUTONS            */
+/* ------------------------- */
+.button {
+    display: inline-block;
+    background-color: #28a745; /* Vert vif */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-bottom: 20px; /* Espacement sous le bouton */
+}
+
+.button:hover {
+    background-color: #218838; /* Vert plus foncé */
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px; /* Réduit l'espacement intérieur */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 13px; /* Réduit la taille de la police */
+    }
+
+    .btn-submit {
+        font-size: 14px; /* Réduit la taille de la police */
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Réduit la largeur de la sidebar sur les écrans moyens */
+    }
+
+    .main-content {
+        margin-left: 200px; /* Ajuste l'espace pour le contenu principal */
+    }
+
+    .car-table thead {
+        display: none;
+    }
+
+    .car-table tr {
+        display: block;
+        margin-bottom: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        padding: 15px;
+    }
+
+    .car-table td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .car-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        position: absolute; /* Rend la sidebar flottante */
+        width: 100%; /* Occupe toute la largeur de l'écran */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        top: 0;
+        left: -100%; /* Cache la sidebar par défaut */
+        transition: all 0.3s ease; /* Transition pour l'animation */
+    }
+
+    .sidebar.active {
+        left: 0; /* Affiche la sidebar lorsqu'elle est active */
+    }
+
+    .main-content {
+        margin-left: 0; /* Supprime l'espace pour la sidebar */
+        padding: 20px;
+    }
+}
+
+/* Bouton pour afficher/masquer la sidebar */
+.toggle-sidebar {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #e20b0b; /* Rouge vif */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Au-dessus de la sidebar */
+}
+
+.toggle-sidebar:hover {
+    background-color: #c00; /* Rouge plus foncé au survol */
+}
+
+@media (max-width: 576px) {
+    .toggle-sidebar {
+        display: block; /* Affiche le bouton sur les petits écrans */
+    }
+}
